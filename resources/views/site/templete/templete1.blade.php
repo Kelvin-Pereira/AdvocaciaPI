@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +17,7 @@
   <link href="./assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="./assets/demo/demo.css" rel="stylesheet" />
-  <style>
 
-  </style>
 </head>
 <body class="index-page sidebar-collapse">
         
@@ -47,6 +46,11 @@
       // Sliders Init
       materialKit.initSliders();
     });
+
+    jQuery(function ($) {
+    $("#comp_nota").mask("99/9999");
+      });
+
 
 
     function scrollToDownload() {
@@ -109,6 +113,7 @@
         template: '<i class="fab fa-twitter"></i> Twitter',
         url: 'https://demos.creative-tim.com/material-kit/index.html'
       });
+
 
     });
   </script>

@@ -1,3 +1,4 @@
+
 @section('navbar')
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container">

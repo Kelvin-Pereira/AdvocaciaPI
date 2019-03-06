@@ -31,50 +31,84 @@
                                 <div class="col-lg-6 col-sm-4">
                                     <div class="form-group">
                                         <label for="exampleInput1" class="bmd-label-floating">Nome</label>
-                                        <input type="text" class="form-control" id="exampleInput1" name="name">
+                                        <input type="text" class="form-control" id="exampleInput1" name="name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg- col-sm-4">
                                     <div class="form-group">
                                             <label for="exampleInput1" class="bmd-label-floating">CPF</label>
-                                        <input type="text" class="form-control " id="exampleInput1" name="">
+                                        <input type="text" class="form-control " id="exampleInput1" name="cpf" required>
                                     </div>
                                 </div>
-
-                                <!-- Submit -->
-                                <button type="reset" class="btn ">Limpar</button>
-                                <button type="submit" class="btn btn-success">Enviar</button>
+                                <div class="col-lg- col-sm-4">
+                                    <div class="form-group">
+                                            <label for="exampleInput1" class="bmd-label-floating">Data Nascimento</label>
+                                        <input type="text" class="form-control " id="exampleInput1" name="dataNasc" required>
+                                    </div>
+                                </div>
+                                
                             </div>      
+                                    <!-- Submit -->
+                                    <button type="reset" class="btn ">Limpar</button>
+                                    <button type="submit" class="btn btn-success">Enviar</button>
                         </form>   
                     </div>
                     <div class="tab-pane" id="juridica">
                         <!-- Formulario Pessoa Juídica Por Kelvin -->
                         <form action="pessoaFisica" method="post">
-
-                            <div class="col-lg-10 col-sm-4">
-                                <div class="form-group">
-                                    <label for="exampleInput1" class="bmd-label-floating">Razão Social</label>
-                                    <input type="text" class="form-control" id="exampleInput1" name="name">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-4">
+                                    <div class="form-group">
+                                        <label for="exampleInput1" class="bmd-label-floating">Razão Social</label>
+                                        <input type="text" class="form-control" id="exampleInput1" name="name" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-5 col-sm-4">
-                                <div class="form-group">
-                                    <label for="exampleInput1" class="bmd-label-floating">CPNJ</label>
-                                    <input type="text" class="form-control " id="exampleInput1" name="cnpj">
+                                <div class="col-lg-5 col-sm-4">
+                                    <div class="form-group">
+                                        <label for="exampleInput1" class="bmd-label-floating">CPNJ</label>
+                                        <input type="text" class="form-control " id="exampleInput1" name="cnpj" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4">
-                                <div class="form-group has-default bmd-form-group">
-                                    <input type="text" class="form-control" placeholder="Data Fundação">
+                                <div class="col-lg-3 col-sm-4">
+                                    <div class="form-group has-default bmd-form-group">
+                                        <input type="text" class="form-control" placeholder="Data Fundação" required>
+                                    </div>
                                 </div>
+                                
                             </div>
-                            
                             <!-- Submit -->
                             <button type="reset" class="btn ">Limpar</button>
                             <button type="submit" class="btn btn-success">Enviar</button>
                         </form>
                     </div>
                 </div>
+            </div>
+            <!--Contatos -->
+            <div class="col-6">
+            <h3>Contatos</h3><hr>
+                <div class="row well">
+
+                        <div class="col-lg-6 col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInput1" class="bmd-label-floating">E-mail</label>
+                                <input type="email" class="form-control" id="exampleInput1" name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInput1" class="bmd-label-floating">Telefone</label>
+                                <input type="text" class="form-control" id="exampleInput1" name="telefone1" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="form-group">
+                                <label for="exampleInput1" class="bmd-label-floating">Telefone</label>
+                                <input type="text" class="form-control" id="exampleInput1" name="telefone2" required>
+                            </div>
+                        </div>
+
+                </div>
+
             </div>
         </div>
     </div>
