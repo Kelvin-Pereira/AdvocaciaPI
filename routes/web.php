@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('site.pessoa.index');
+    return view('Site.Home');
 });
+
+//Clientes
+Route::get('/CadastroDeCliente','Cliente\ClienteController@index');
+
+//Advogado
+Route::get('/CadastroDeAdvogado','Advogado\AdvogadoController@index');
+Route::get('/CadastarAdvogado','Advogado\AdvogadoController@CadastroAdvogado');
+Route::post('/CadastarAdvogado','Advogado\AdvogadoController@CadastroAdvogado');

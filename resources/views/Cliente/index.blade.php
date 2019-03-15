@@ -1,11 +1,10 @@
-@extends('site.templete.templete1')
-@extends('site.templete.navbarLogado')
+@extends('layouts.app')
 
-@section('content')
+@section('conteudo')
 <br>
 
-<div class="main main-raised ">
-    <center><h3 >Cadastro de pessoa</h3></center><hr>
+<div class="main main-raised">
+    <h1 class="text-center" id="top">Cadastro de pessoa</h1><hr>
     <div class="container">  
           
         <div class="row">
@@ -27,10 +26,10 @@
             <div class="tab-content tab-space">
                 <div class="tab-pane active" id="fisica">
                 <!-- Formulario Pessoa Fisica Por Kelvin -->
-                    <form action="pessoaFisica" method="post">
+                    <form action="/NovoClienteFisica" method="post">
                             <h4>DADOS BÁSICOS</h4>
                         <div class="row">
-                                
+                                @csrf
                             <div class="col-lg-4 col-sm-4">
                                 <div class="form-group">
                                     <label for="exampleInput1" class="bmd-label-floating">Nome</label>
@@ -49,25 +48,25 @@
                                     <input type="text" class="form-control " id="exampleInput1" name="cpf" required>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-4" >
+                            <div class="col-lg-3 col-sm-4" >                       
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1 " class="bmd-label-floating"></label>
-                                    <select class="form-control  bmd-label-floating"  id="exampleFormControlSelect1" name="estadoCivil" required>
-                                        <option selected>Estado Cívil</option>
-                                        <option value="Estado">Casado  </option>
-                                        <option value="Separado">Separado </option>
-                                        <option value="Divorciado">Divorciado </option>
-                                        <option value="Viúvo">Viúvo  </option>
+                                    <label for="exampleFormControlSelect1"></label>
+                                    <select class="form-control selectpicker bmd-label-floating" data-style="btn btn-link" id="exampleFormControlSelect1" name="estadoCivil" required>
+                                            <option value="">Estado Cívil</option>
+                                            <option value="Estado">Casado  </option>
+                                            <option value="Separado">Separado </option>
+                                            <option value="Divorciado">Divorciado </option>
+                                            <option value="Viúvo">Viúvo  </option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-4" >
+                            <div class="col-lg-3 col-sm-4" >                       
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1 " class="bmd-label-floating"></label>
-                                    <select class="form-control  bmd-label-floating"  id="exampleFormControlSelect1" name="sexo" required>
-                                        <option selected>Gênero</option>
-                                        <option value="M">Masculino  </option>
-                                        <option value="F">Feminino </option>
+                                    <label for="exampleFormControlSelect1"></label>
+                                    <select class="form-control selectpicker bmd-label-floating" data-style="btn btn-link" id="exampleFormControlSelect1" name="sexo" required>
+                                            <option value="">Gênero</option>
+                                            <option value="M">Masculino  </option>
+                                            <option value="F">Feminino </option>
                                     </select>
                                 </div>
                             </div>
@@ -112,18 +111,20 @@
                                     <input type="text" class="form-control" id="exampleInput1" name="telefone2" >
                                 </div>
                             </div>
-                        </div>
-                                <!-- Submit -->
-                                <button type="reset" class="btn ">Limpar</button>
-                                <button type="submit" class="btn btn-success">Enviar</button>
+                        </div><br>
+                                <div class="text-right">
+                                    <!-- Submit -->
+                                    <button type="reset" class="btn ">Limpar</button>
+                                    <button type="submit" class="btn btn-success">Enviar</button>
+                                </div>
                     </form>   
                 </div>
                 <div class="tab-pane" id="juridica">
                     <!-- Formulario Pessoa Juídica Por Kelvin -->
-                    <form action="pessoaFisica" method="post">
+                    <form action="NovoClienteJuridica" method="post">
                             <h4>DADOS BÁSICOS</h4>
                         <div class="row">
-                                
+                                @csrf
                             <div class="col-lg-6 col-sm-4">
                                 <div class="form-group">
                                     <label for="exampleInput1" class="bmd-label-floating">Razão Social</label>
@@ -167,10 +168,12 @@
                                     <input type="text" class="form-control" id="exampleInput1" name="telefone2" >
                                 </div>
                             </div>
-                            <!-- Submit -->
-                            <button type="reset" class="btn ">Limpar</button>
-                            <button type="submit" class="btn btn-success">Enviar</button>
-                        </div>
+                        </div><br>
+                                <div class="text-right">
+                                    <!-- Submit -->
+                                    <button type="reset" class="btn ">Limpar</button>
+                                    <button type="submit" class="btn btn-success">Enviar</button>
+                                </div>
                     </form> 
                 </div>
             </div>
