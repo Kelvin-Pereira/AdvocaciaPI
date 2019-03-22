@@ -15,7 +15,7 @@ class CreateAdvogadoAreaAtuacaosTable extends Migration
     {
         Schema::create('advogado_area_atuacaos', function (Blueprint $table) {
             $table->integer('area_atuacao')->unsigned();
-            $table->foreign('area_atuacao')->references('id')->on('area_atuacao');
+            $table->foreign('area_atuacao')->references('id')->on('area_atuacaos');
             $table->integer('advogado')->unsigned();
             $table->foreign('advogado')->references('id')->on('advogados');
             $table->softDeletes();

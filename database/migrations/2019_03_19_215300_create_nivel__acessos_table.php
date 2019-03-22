@@ -13,7 +13,7 @@ class CreateNivelAcessosTable extends Migration
      */
     public function up()
     {
-        Schema::create('nivel__acessos', function (Blueprint $table) {
+        Schema::create('nivel_acessos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nivel',15);
             $table->softDeletes();
