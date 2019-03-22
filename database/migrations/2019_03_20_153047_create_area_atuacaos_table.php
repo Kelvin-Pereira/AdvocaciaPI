@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePessoaJuridicasTable extends Migration
+class CreateAreaAtuacaosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pessoa_juridicas', function (Blueprint $table) {
+        Schema::create('area_atuacaos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cnpj',14);
-            $table->date('data_fundacao');
-            $table->integer('cliente_id')->unsigned(); 
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->string('area',60);
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +28,6 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pessoa_juridicas');
+        Schema::dropIfExists('area_atuacaos');
     }
 }

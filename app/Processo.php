@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Processo extends Model
 {
-    Use SoftDeletes;
+    use SoftDeletes;
     protected $dates = ['deleted_at'];
 }
