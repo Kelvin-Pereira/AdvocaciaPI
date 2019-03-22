@@ -15,7 +15,7 @@ class CreatePessoaJuridicasTable extends Migration
     {
         Schema::create('pessoa_juridicas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cnpj',14);
+            $table->integer('cnpj')->unique();
             $table->date('data_fundacao');
             $table->integer('cliente_id')->unsigned(); 
             $table->foreign('cliente_id')->references('id')->on('clientes');
