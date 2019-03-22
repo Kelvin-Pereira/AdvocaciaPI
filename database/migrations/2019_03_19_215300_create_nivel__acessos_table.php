@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePessoaJuridicasTable extends Migration
+class CreateNivelAcessosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,9 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pessoa_juridicas', function (Blueprint $table) {
+        Schema::create('nivel_acessos', function (Blueprint $table) {
             $table->increments('id');
-<<<<<<< HEAD
-            $table->integer('cnpj')->unique();
-=======
-            $table->string('cnpj',14);
->>>>>>> master
-            $table->date('data_fundacao');
-            $table->integer('cliente_id')->unsigned(); 
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->string('nivel',15);
             $table->softDeletes();
             $table->timestamps();
         });
@@ -35,6 +28,6 @@ class CreatePessoaJuridicasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pessoa_juridicas');
+        Schema::dropIfExists('nivel__acessos');
     }
 }

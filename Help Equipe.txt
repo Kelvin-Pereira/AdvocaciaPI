@@ -59,6 +59,7 @@ $this->call([
             Nome_Da_Seeder::class,
         ]);
 }
+<<<<<<< HEAD
 ===============================================================================================================
 instalat composer
 composer create-project --prefer-dist laravel/laravel escola
@@ -129,3 +130,6 @@ class Curso extends Model
  $table->foreing('curso__id')->references('id')->on('cursos');
 
  
+=======
+===============================================================================================================
+>>>>>>> master
