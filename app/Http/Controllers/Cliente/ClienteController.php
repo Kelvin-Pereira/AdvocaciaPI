@@ -58,7 +58,7 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        //
+       
     }
 
     /**

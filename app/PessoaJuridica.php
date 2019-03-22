@@ -5,8 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Advogado extends Model
+class PessoaJuridica extends Model
 {
-    use SoftDeletes;
+    Use SoftDeletes;
     protected $dates = ['deleted_at'];
 }
