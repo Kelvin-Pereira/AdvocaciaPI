@@ -20,8 +20,8 @@ class CreateAdvogadosTable extends Migration
             $table->string('email',60);
             $table->string('telefone1',16);
             $table->string('telefone2',16);
-            $table->integer('nivel_acesso')->unsigned();
-            $table->foreign('nivel_acesso')->references('id')->on('nivel_acessos');
+            $table->integer('nivel_acesso_id')->unsigned();
+            $table->foreign('nivel_acesso_id')->references('id')->on('nivel_acessos');
             $table->softDeletes();
             $table->timestamps();
         });

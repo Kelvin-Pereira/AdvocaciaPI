@@ -14,12 +14,13 @@ class AdvogadoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('Advogado.index');
+    {   
+        $advogados = Advogado::all();
+        return view('Advogado.index', compact('advogados'));
     }
     public function CadastroAdvogado()
     {
-        return view('Advogado.creat');
+        return view('Advogado.create');
     }
 
     /**
@@ -85,6 +86,6 @@ class AdvogadoController extends Controller
      */
     public function destroy(Advogado $advogado)
     {
-        //
+        dd($advogado);
     }
 }

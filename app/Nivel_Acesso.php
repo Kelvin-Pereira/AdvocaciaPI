@@ -9,5 +9,5 @@ class Nivel_Acesso extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
-    protected $table = 'nivel_acesso';
+    protected $table = 'nivel_acessos';
 }

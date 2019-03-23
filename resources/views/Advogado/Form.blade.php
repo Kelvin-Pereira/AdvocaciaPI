@@ -10,7 +10,7 @@
             <div class="row">
                 <div class=" col-3">
                      <div class="form-group bmd-form-group">
-                         <label class="bmd-label-floating"> Name Completo</label>
+                         <label class="bmd-label-floating"> Nome Completo</label>
                          <input type="text" class="form-control" name="nome" required>
                      </div>
                 </div>
